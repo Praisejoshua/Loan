@@ -38,7 +38,7 @@ def predict():
             return redirect(url_for('predict'))
         
         except Exception as e:
-            flash(f'An error occurred.', 'danger')
+            flash(f'An error occurred {e}.', 'danger')
             return redirect(url_for('predict'))
     
     return render_template('loan.html', title='Loan Prediction', form=form)
